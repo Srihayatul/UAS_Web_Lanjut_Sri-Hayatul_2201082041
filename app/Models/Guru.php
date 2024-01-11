@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Negara extends Model
+class Guru extends Model
 {
     use HasFactory;
 
-    protected $table = 'negara';
+    protected $table = 'guru';
 
-    protected $fillable = ['id', 'nama', 'sejarah', 'category_id', 'tahunmerdeka', 'pendiri', 'foto_sampul'];
+    protected $fillable = ['id', 'nama', 'deskripsi', 'category_id', 'tahunlahir', 'lulusan', 'foto_sampul'];
 
     public $incrementing = false;
     protected $keyType = 'string';

@@ -1,38 +1,38 @@
 @extends('layout.template')
-@section('title', 'Edit Data Negara')
+@section('title', 'Edit Data Guru')
 @section('content')
-    <h2 class="mb-4">Edit Negara</h2>
-    <form action="/negara/{{ $negara->id }}/edit" method="POST" enctype="multipart/form-data">
+    <h2 class="mb-4">Edit Guru</h2>
+    <form action="/Guru/{{ $guru->id }}/edit" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
-            <label for="id" class="form-label">ID Negara:</label>
-            <input type="text" class="form-control" id="id" name="id" value="{{ $negara->id }}" readonly>
+            <label for="id" class="form-label">ID Guru:</label>
+            <input type="text" class="form-control" id="id" name="id" value="{{ $guru->id }}" readonly>
         </div>
         <div class="mb-3">
-            <label for="nama" class="form-label">Nama Negara:</label>
-            <input type="text" class="form-control" id="nama" name="nama" value="{{ $negara->nama }}" required>
+            <label for="nama" class="form-label">Nama Guru:</label>
+            <input type="text" class="form-control" id="nama" name="nama" value="{{ $guru->nama }}" required>
         </div>
         <div class="mb-3">
             <label for="category_id" class="form-label">Kategori:</label>
             <select name="category_id" id="category_id" class="form-select" required>
                 <option value="">Pilih Kategori</option>
                 @foreach ($categories as $category)
-                    <option value="{{ $category->id }}" {{ $negara->category_id == $category->id ? 'selected' : '' }}>
+                    <option value="{{ $category->id }}" {{ $guru->category_id == $category->id ? 'selected' : '' }}>
                         {{ $category->nama_kategori }}</option>
                 @endforeach
             </select>
         </div>
         <div class="mb-3">
-            <label for="sejarah" class="form-label">Sejarah:</label>
-            <textarea class="form-control" id="sejarah" name="sejarah" rows="4" required>{{ $negara->sejarah }}</textarea>
+            <label for="deskripsi" class="form-label">deskripsi:</label>
+            <textarea class="form-control" id="deskripsi" name="deskripsi" rows="4" required>{{ $guru->sejarah }}</textarea>
         </div>
         <div class="mb-3">
-            <label for="tahunmerdeka" class="form-label">Tahun Merdeka:</label>
-            <input type="number" class="form-control" id="tahunmerdeka" name="tahunmerdeka" value="{{ $negara->tahunmerdeka }}" required>
+            <label for="tahunlahir" class="form-label">Tahun Merdeka:</label>
+            <input type="number" class="form-control" id="tahunlahir" name="tahunlahir" value="{{ $guru->tahunlahir }}" required>
         </div>
         <div class="mb-3">
-            <label for="pendiri" class="form-label">Pendiri:</label>
-            <input type="text" class="form-control" id="pendiri" name="pendiri" value="{{ $negara->pendiri }}" required>
+            <label for="lulusan" class="form-label">lulusan:</label>
+            <input type="text" class="form-control" id="lulusan" name="lulusan" value="{{ $guru->lulusan }}" required>
         </div>
         <div class="mb-3">
             <label for="change_foto" class="form-label">Ganti Foto Sampul:</label>
@@ -40,7 +40,7 @@
         </div>
         <div class="mb-3">
             <label for="foto_sampul" class="form-label">Foto Sampul:</label>
-            <img src="/images/{{ $negara->foto_sampul }}" class="img-thumbnail" alt="Foto Sampul" width="100px">
+            <img src="/images/{{ $guru->foto_sampul }}" class="img-thumbnail" alt="Foto Sampul" width="100px">
             <input type="file" class="form-control" id="foto_sampul" name="foto_sampul" accept="image/*">
         </div>
         <div class="mb-3">

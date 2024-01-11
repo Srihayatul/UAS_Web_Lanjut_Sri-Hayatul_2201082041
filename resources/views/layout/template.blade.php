@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>negara - @yield('title', 'Website')</title>
+    <title>guru - @yield('title', 'Website')</title>
     <link href="/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
 </head>
@@ -12,7 +12,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-info" data-bs-theme="dark">
         <div class="container">
-            <a class="navbar-brand" href="/">Language</a>
+            <a class="navbar-brand" href="/">Data</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -26,7 +26,7 @@
 
                     @auth
                         <li class="nav-item">
-                            <a class="nav-link" href="/negaras/data">Master Negara</a>
+                            <a class="nav-link" href="/gurus/data">Master Guru</a>
                         </li>
                     @endauth
                 </ul>
@@ -67,7 +67,7 @@
     </div>
 
     <footer class="bg-info text-center text-white py-2">
-        Copyright &copy; 2023 by Amelia Syahara Sihombing
+        Copyright &copy; 2023 by Sri Hayatul
     </footer>
 
     <script src="/bootstrap/bootstrap.bundle.min.js"></script>

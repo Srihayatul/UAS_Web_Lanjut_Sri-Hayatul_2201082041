@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\NegaraController;
+use App\Http\Controllers\GuruController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,29 +16,29 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Dashboard
-Route::get('/', [NegaraController::class, 'index']);
+Route::get('/', [GuruController::class, 'index']);
 // Menampilkan halaman dashboard.
 
-Route::get('/negara/{id}', [NegaraController::class, 'detail']);
+Route::get('/guru/{id}', [GuruController::class, 'detail']);
 // Menampilkan detail film berdasarkan ID.
 
 // CRUD Movie
-Route::get('/negaras/data', [NegaraController::class, 'data'])->middleware('auth');
+Route::get('/gurus/data', [GuruController::class, 'data'])->middleware('auth');
 // Memerlukan otentikasi untuk membaca data film.
 
-Route::get('/negaras/create', [NegaraController::class, 'create'])->middleware('auth');
+Route::get('/gurus/create', [GuruController::class, 'create'])->middleware('auth');
 // Memerlukan otentikasi untuk menampilkan halaman pembuatan film.
 
-Route::post('/negara/store', [NegaraController::class, 'store'])->middleware('auth');
+Route::post('/guru/store', [GuruController::class, 'store'])->middleware('auth');
 // Memerlukan otentikasi untuk menyimpan data film baru.
 
-Route::get('/negara/{id}/edit', [NegaraController::class, 'edit'])->middleware('auth');
+Route::get('/guru/{id}/edit', [GuruController::class, 'edit'])->middleware('auth');
 // Memerlukan otentikasi untuk menampilkan halaman pengeditan film berdasarkan ID.
 
-Route::post('/negara/{id}/edit', [NegaraController::class, 'update'])->middleware('auth');
+Route::post('/guru/{id}/edit', [GuruController::class, 'update'])->middleware('auth');
 // Memerlukan otentikasi untuk menyimpan perubahan pada data film berdasarkan ID.
 
-Route::get('/negara/delete/{id}', [NegaraController::class, 'delete'])->middleware('auth');
+Route::get('/guru/delete/{id}', [GuruController::class, 'delete'])->middleware('auth');
 // Memerlukan otentikasi untuk menghapus data film berdasarkan ID.
 
 // Login

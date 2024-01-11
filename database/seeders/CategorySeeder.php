@@ -15,17 +15,14 @@ class CategorySeeder extends Seeder
     {
         $categories = [
             [
-                'nama_kategori' => 'Tidak Maju',
-                'keterangan' => 'Negara Tidak Maju'
+                'nama_kategori' => 'PNS',
+                'keterangan' => 'Guru Pns'
             ],
             [
-                'nama_kategori' => 'Berkembang',
-                'keterangan' => 'Negara Berkembang'
+                'nama_kategori' => 'HONOR',
+                'keterangan' => 'Guru Honor'
             ],
-            [
-                'nama_kategori' => 'Maju',
-                'keterangan' => 'Negara Maju'
-            ]
+            
         ];
 
         foreach ($categories as $category) {

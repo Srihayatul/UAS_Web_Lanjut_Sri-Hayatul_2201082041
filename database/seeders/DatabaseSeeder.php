@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-use App\Models\Negara;
+use App\Models\Guru;
 use App\Models\Category;
 use Illuminate\Database\Seeder;
 use Database\Seeders\UserSeeder;
@@ -28,7 +28,7 @@ class DatabaseSeeder extends Seeder
 
         //seeder
         $this->call(CategorySeeder::class);
-        $this->call(NegaraSeeder::class);
+        $this->call(GuruSeeder::class);
         $this->call(UserSeeder::class);
     }
 }

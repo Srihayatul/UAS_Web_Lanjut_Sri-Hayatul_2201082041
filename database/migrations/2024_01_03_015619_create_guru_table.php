@@ -11,21 +11,22 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('negara', function (Blueprint $table) {
-            $table->string('id');
+        Schema::create('guru', function (Blueprint $table) {
+            $table->string('id'); // Laravel convention for auto-incrementing primary key
             $table->string('nama');
-
+            
+            // Foreign key for category_id
             $table->foreignId('category_id')
                 ->constrained()
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
-
-            $table->text('sejarah');
-            $table->integer('tahunmerdeka');
-            $table->string('pendiri');
+            
+            $table->text('deskripsi');
+            $table->integer('tahunlahir');
+            $table->string('lulusan');
             $table->string('foto_sampul');
-            $table->timestamps();
             $table->primary('id');
+            $table->timestamps(); // Created_at and updated_at timestamps
         });
     }
 
@@ -34,6 +35,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('negara');
+        Schema::dropIfExists('guru');
     }
 };
